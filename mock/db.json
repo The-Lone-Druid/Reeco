@@ -1,0 +1,118 @@
+{
+  "orders": [
+    {
+      "id": "32457ABC",
+      "supplier_id": "223423",
+      "department_id": "300-444-679",
+      "card_id": "323423",
+      "shipping_date": "2023-09-26T11:42:24Z",
+      "order_total": 15028.3,
+      "categories": [
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        },
+        {
+          "id": 1,
+          "name": "Food"
+        }
+      ],
+      "supplier_details": {
+        "id": "223423",
+        "supplier_name": "East coast fruits & vegetables"
+      },
+      "order_status": "Awating your approval"
+    }
+  ],
+  "carts": [
+    {
+      "id": "323423",
+      "products": [
+        {
+          "id": 1,
+          "product_name": "Apples",
+          "brand": "Granny Smith",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png"
+        },
+        {
+          "id": 2,
+          "product_name": "Bananas",
+          "brand": "Chiquita",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png"
+        },
+        {
+          "id": 3,
+          "product_name": "Oranges",
+          "brand": "Sunkist",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png"
+        },
+        {
+          "id": 4,
+          "product_name": "Pears",
+          "brand": "Bartlett",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png"
+        },
+        {
+          "id": 5,
+          "product_name": "Grapes",
+          "brand": "Red Globe",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png"
+        },
+        {
+          "id": 6,
+          "product_name": "Strawberries",
+          "brand": "Driscoll's",
+          "quantity": 2,
+          "status": "",
+          "product_price": 1.99,
+          "product_unit": "kg",
+          "product_image": "https://www.pngmart.com/files/15/Avocado-PNG-Photo.png0"
+        }
+      ]
+    }
+  ]
+}

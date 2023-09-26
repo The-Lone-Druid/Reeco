@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider as ReduxProvider } from "react-redux";
 import App from "./App.tsx";
-import "./i18n/i18n";
+import "@fontsource/poppins";
 import "./index.scss";
 import { store } from "./redux/store.ts";
 import theme from "./theme/mui.config.ts";
