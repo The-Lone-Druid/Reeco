@@ -10,6 +10,22 @@ const theme = createTheme({
       main: "#166534",
     },
   },
+  components: {
+    MuiTextField: {
+      defaultProps: {
+        variant: "outlined",
+      },
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              borderRadius: "100px",
+            },
+          },
+        },
+      },
+    },
+  },
 });
 
 export default theme;

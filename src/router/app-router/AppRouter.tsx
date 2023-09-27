@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { HomeScreen, OrdersScreen } from "../../screens";
+import { HomeScreen, OrderDetailsScreen, OrdersScreen } from "../../screens";
 import { AppLayout } from "../layouts";
-import OrderDetailsScreen from "../../screens/order-details/OrderDetailsScreen";
 
 type Props = {};
 
@@ -16,8 +15,6 @@ const AppRouter = (props: Props) => {
             <Route path=":orderId" element={<OrderDetailsScreen />} />
           </Route>
         </Route>
-
-        {/* Just for Assignment purpose */}
         <Route path="*" element={<Navigate to="/orders/32457ABC" />} />
       </Routes>
     </BrowserRouter>

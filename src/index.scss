@@ -1,3 +1,5 @@
+@import "../node_modules/@fontsource/poppins/500.css";
+@import "../node_modules/@fontsource/poppins/600.css";
 @import "../node_modules/@fontsource/poppins/700.css";
 @import "../node_modules/@fontsource/poppins/800.css";
 @import "../node_modules/@fontsource/poppins/900.css";
@@ -7,5 +9,4 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(243, 243, 253) !important;
 }

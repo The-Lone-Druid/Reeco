@@ -1,2 +1,3 @@
-export { default as HomeScreen } from "./home/index";
-export { default as OrdersScreen } from "./orders/index";
+export { default as HomeScreen } from "./home";
+export { default as OrderDetailsScreen } from "./order-details";
+export { default as OrdersScreen } from "./orders";

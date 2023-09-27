@@ -7,6 +7,9 @@ export const ordersApi = createApi({
   reducerPath: "ordersApi",
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_apiUrl }),
   endpoints: (builder) => ({
+    /**
+     * Fetches a single order by its ID
+     */
     findOrderById: builder.mutation<Order, string>({
       query: (orderId) => ({
         url: `/orders/${orderId}`,

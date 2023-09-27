@@ -2,11 +2,13 @@ import { KeyboardArrowDown, ShoppingCartOutlined } from "@mui/icons-material";
 import { Button, IconButton, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../hooks/redux.hooks";
+import { selectTotalCartItems } from "../../redux/slices/cart-slice/cart.slice";
 
 type Props = {};
 
 const AppHeader = (props: Props) => {
-  const [totalCartItems, setTotalCartItems] = React.useState(2);
+  const totalCartItems = useAppSelector(selectTotalCartItems);
   const [menuLinks, setMenuLinks] = React.useState([
     {
       id: 0,
@@ -47,7 +49,7 @@ const AppHeader = (props: Props) => {
       <div className="flex items-center gap-6">
         <IconButton className="!text-white relative">
           <div className="absolute top-0 left-0 text-[8px] bg-green-500 h-[18px] w-[18px] rounded-full flex items-center justify-center">
-            {totalCartItems}
+            {totalCartItems ? totalCartItems : 0}
           </div>
           <ShoppingCartOutlined />
         </IconButton>

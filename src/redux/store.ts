@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
-import counterReducer from "./slices/counter-slice/counter.slice";
-import { ordersApi } from "../services/orders-service/orders.service";
 import { cartsApi } from "../services/carts-service/carts.service";
+import { ordersApi } from "../services/orders-service/orders.service";
+import cartReducer from "./slices/cart-slice/cart.slice";
 
 export const store = configureStore({
   reducer: {
     // Add reducers here
-    counter: counterReducer,
+    cart: cartReducer,
     // Add RTK Query Services here
     // Add the generated reducer as a specific top-level slice
     [ordersApi.reducerPath]: ordersApi.reducer,
