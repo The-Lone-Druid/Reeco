@@ -1,5 +1,14 @@
 # Reeco Assignment
 
+### Create ENV File
+
+1. create .env.local file in root directory
+2. Enter the following values in the file
+
+   ```
+   VITE_apiUrl="http://localhost:8081"
+   ```
+
 ### Project setup & installation
 
 <!-- Download node 18.17.1 and use -->
