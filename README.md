@@ -8,3 +8,5 @@
 2. npm install
 3. npm run dev "will start the dev server"
 4. npm run mock-server "will start the mock server"
+
+All the features mentioned in the Requirements are implemented.
