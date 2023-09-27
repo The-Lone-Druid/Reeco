@@ -37,6 +37,7 @@ const OrderDetailsScreen = (props: Props) => {
   const dispatch = useAppDispatch();
   const [orderId, setOrderId] = React.useState<string | undefined>(undefined);
   const [searchTerm, setSearchTerm] = React.useState<string>("");
+  const [productTotal, setProductTotal] = React.useState<number>(0);
   const [debouncedSearchTerm, setDebouncedSearchTerm] =
     React.useState<string>("");
   const [openMissingItemDialog, setOpenMissingItemDialog] =
@@ -281,9 +282,19 @@ const OrderDetailsScreen = (props: Props) => {
    */
   React.useEffect(() => {
     if (findCartProducts.isSuccess) {
+      findCartProducts.data?.forEach((product) => {
+        setProductTotal(
+          (prev) => prev + product?.product_price * product?.quantity
+        );
+      });
+
       setCartListTableData(findCartProducts.data || []);
       dispatch(setTotalCartItems(findCartProducts.data?.length || 0));
     }
+
+    return () => {
+      setProductTotal(0);
+    };
   }, [findCartProducts.isSuccess, findCartProducts.data]);
 
   /**
@@ -350,13 +361,13 @@ const OrderDetailsScreen = (props: Props) => {
             <div className="px-4 border-r">
               <p className="font-bold text-gray-400 text-sm">Total</p>
               <Typography variant="h6" className="!font-bold text-gray-700">
-                {findOrderByIdRes?.data?.order_total && (
+                {productTotal && (
                   <NumericFormat
                     prefix="$ "
                     displayType="text"
                     thousandsGroupStyle="lakh"
                     thousandSeparator=","
-                    value={findOrderByIdRes?.data?.order_total}
+                    value={productTotal.toFixed()}
                   />
                 )}
               </Typography>
